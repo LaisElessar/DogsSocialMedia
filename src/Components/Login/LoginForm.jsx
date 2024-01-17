@@ -1,34 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Input from '../Forms/Input';
+import Button from '../Forms/Button';
+import useForm from '../../Hooks/useForm';
 
 
 const LoginForm = () => {
-    const [username, setUserName] = React.useState('');
-    const [userpassword, setUserPassword] = React.useState('');
     
+    const username = useForm();
+    const userpassword = useForm()
+
     function handleSubmit(event) {
         event.preventDefault();
-        fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({username, userpassword}),
-        }).then((response)=>{
-            console.log(response);
-            return response.json();
-        }).then(json => {
-            console.log(json);
-        })
+        if(username.validate() && userpassword.validate()){
+            fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({username, userpassword}),
+            }).then((response)=>{
+                console.log(response);
+                return response.json();
+            }).then(json => {
+                console.log(json);
+            })
+        }
     }
 
     return (
     <section>
         <h1>Login</h1>
         <form action="" onSubmit={handleSubmit}>
-            <input type="text" value={username} onChange={({target})=> setUserName(target.value)}/>
-            <input type='password' value={userpassword} onChange={({target})=> setUserPassword(target.value)}/>
-            <button>Enviar</button>
+            <Input label="Usuário" type="text" name="username" {...username}/>
+            <Input label="Senha" type="password" name="userpassword" {...userpassword}/>
+            {/* <input type='password' value={userpassword} onChange={({target})=> setUserPassword(target.value)}/> */}
+            <Button>Entrar</Button>
         </form>
         <Link to='/login/criar'>Cadastro</Link>
     </section>
