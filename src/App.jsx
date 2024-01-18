@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import Login from './Components/Login/Login';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
-import {UserStorage} from './UserContext';
+import { UserStorage } from './UserContext';
 
 const App = () => {
   return (
