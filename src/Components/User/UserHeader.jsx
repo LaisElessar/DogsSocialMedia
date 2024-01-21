@@ -2,6 +2,7 @@ import React from 'react';
 import UserHeaderNav from './UserHeaderNav';
 import styles from './UserHeader.module.css';
 import { useLocation } from 'react-router-dom';
+import useMedia from '../../Hooks/useMedia';
 
 const UserHeader = () => {
     const [title, setTitle] = React.useState('');
@@ -13,11 +14,12 @@ const UserHeader = () => {
             case '/conta/postar':
                 setTitle('Poste Sua Foto');
                 break;
-            case '/conta/estatísticas':
-                setTitle('Estatisticas');
+            case '/conta/estatisticas':
+                setTitle('Estatísticas');
                 break;
             default:
                 setTitle('Suas Fotos');
+                break;
         }
     }, [location]);
     
