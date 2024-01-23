@@ -14,7 +14,6 @@ const User = () => {
         <Route path='postar' element={<UserPhotoPost/>}/>
         <Route path='estatisticas' element={<UserStatistic/>}/>
       </Routes>
-      srgsrdg
     </section>
   );
 }

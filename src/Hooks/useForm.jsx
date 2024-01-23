@@ -8,7 +8,11 @@ const types = {
     password: {
         regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
         message: 'Sua senha precisa ter no mínimo 8 caracteres e possuir, letras maiúsculas e minúsculas e um caracter especial.',
-    }
+    },
+    number: {
+        regex: /^\d+$/,
+        message: 'Utilize apenas números.',
+    },
 }
 
 const useForm = (type) => {
