@@ -35,7 +35,7 @@ const LoginForm = () => {
             (<Button disabled >Carregando...</Button>)
             : 
             (<Button>Entrar</Button>)}
-            <Error error={error}/>
+            <Error error={error && 'Dados incorretos.'}/>
         </form>
         <Link className={styles.forgotPass} to='/login/perdeu'>Esqueci minha senha</Link>
         <div className={styles.register}>
