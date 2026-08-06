@@ -1,7 +1,42 @@
-# DogsSocialMedia
+# 🌍 Rede Social para Cachorros
 
-Compartilhe fotos de seu amado pet na rede social para cachorros!
+O Dogs Social Media é um projeto desenvolvido como parte de um estudo de React.
 
-Este projeto foi  desenvolvido utilizando **React** e **CSS**.
+O objetivo foi criar um "clone" simplificado do Instagram.
 
-**Link para acesso**: https://dogs-social-media-kappa.vercel.app/
+![DogsSocialMedia](./src/Assets/Resumo.png)
+
+## Demo
+
+Acesse: https://dogs-social-media-kappa.vercel.app/
+
+## 💻 Tecnologias Utilizadas
+
+* HTML5
+
+* CSS3
+
+* React
+
+* Design responsivo
+
+## ⚡ Performance e Acessibilidade
+
+O projeto foi otimizado para alcançar excelentes métricas de desempenho e acessibilidade utilizando boas práticas de design e desenvolvimento web.
+
+### Lighthouse
+
+![Lighthouse](./src/Assets/Dogs.png)
+
+### Accessible Web
+
+![AccessibleWeb](./src/Assets/DogsSocialMedia.png)
+
+## 👩‍💻 Sobre a Designer
+
+Desenvolvido por mim — UI/UX Designer & Front-end Developer.
+Apaixonada por criar experiências digitais que unem estética, propósito e funcionalidade.
+
+**📫 Entre em contato:**
+
+[LinkedIn](https://www.linkedin.com/in/la%C3%ADs-reis/) | [Behance](https://www.behance.net/laisreis2)
